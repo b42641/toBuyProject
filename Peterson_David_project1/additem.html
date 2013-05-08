@@ -1,0 +1,92 @@
+<!  toBuy Project.js
+<! David Peterson 2013/5/8
+<! VFW 1305 assignment 3
+<! toBuy gives the user a central location to create a "wishlist"
+<! for books, music, software,
+<! ultimately the category can be linked to preferred online store
+
+<! index.html = Main Startup Screen for toBuy Application
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>toBuy WishList</title>
+<!link rel="stylesheet" href="toBuy.css" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="toBuy Wishlist" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="user-scalable=no, with=device-width" />
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+</head>
+<body>
+<header>
+    <h1>Input <em>toBuy</em> Item</h1>
+</header>
+<form action="" method="post">
+    <fieldset>
+        <legend>Information</legend>
+        <! -- text type - FSU REQ -->
+        <ul>
+            <li><label for="itemName">Item Name:</label><input type="text" id="itemName" /></li>
+        </ul>
+        <ul>
+            <li>Media Type
+                <! -- text checkbox - FSU REQ -->
+                <li><input type="checkbox" value="Book" id="book" /><label for="book">Book</label></li>
+                <li><input type="checkbox" value="eBook" id="ebook" /><label for="ebook">eBook</label></li>
+                <li><input type="checkbox" value="Audible" id="audible" /><label for="audible">Audible</label></li>
+                <li><input type="checkbox" value="Music" id="music" /><label for="music">Music</label></li>
+                <li><input type="checkbox" value="Movie" id="movie" /><label for="movie">Movie</label></li>             
+                <li><input type="checkbox" value="Software" id="software" /><label for="software">Software</label></li>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <! -- Priority Range - FSU REQ --> 
+                <label for="priority">How much do you desire this item:</label>
+                <input type="range" min="1" max="10" name="rating" type="range">
+            </li>
+        </ul>
+        <ul>
+            <li>Select Preferred Vendor
+                <label for="Preferred Vendor"</label>
+                <select id="preferredVendor">
+                    <optgroup label="Vendor"
+                              <option value="Amazon">amazon</option>
+                              <option value="iTunes">iTunes</option>
+                              <option value="Audible.com">audible</option>
+                              <option value="Barnes & Noble">barnes</option>
+                              <option value="Netflix">netflix</option>
+                </select>
+        </ul>
+        <! -- Desired Date -- FSU REQ -->
+        <ul>
+            <li>
+                <label for="desireDate">Purchase by date:</label><input type="desireDate">
+            </li>
+        </ul>
+        <ul>
+
+        </ul>
+            <! -- textarea - FSU REQ --> 
+        <ul>
+            <li><label for="description">Notes:</label><textarea rows"3" cols="30">Add necessary notes and instructions here.</textarea>
+        </ul>
+        <! Save Date - hidden field - FSU REQ --> 
+        <input type="hidden" name="saveDate" value=$date>
+        </ul>
+        <ul>
+            <! -- Submit Button - FSU REQ -->
+            <li>Ready to Save
+            <input type="submit" value="Submit">
+            </li>
+        </ul>
+</form>
+
+<!script type="text/javascript" src="toBuy.js">
+
+</body>
+</html>
