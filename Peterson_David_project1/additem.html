@@ -12,81 +12,88 @@
 <html>
 <head>
     <title>toBuy WishList</title>
-<!link rel="stylesheet" href="toBuy.css" type="text/css" />
+
+    <link rel="stylesheet" href="toBuy.css" type="text/css" />
+
     <meta charset="UTF-8" />
     <meta name="description" content="toBuy Wishlist" />
     <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="user-scalable=no, with=device-width" />
-    <meta name="viewport" content="target-densitydpi=device-dpi" />
+    <!meta name="viewport" content="user-scalable=no, with=device-width" />
+    <!meta name="viewport" content="target-densitydpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
+    
 </head>
 <body>
-<header>
-    <h1>Input <em>toBuy</em> Item</h1>
-</header>
-<form action="" method="post">
-    <fieldset>
-        <legend>Information</legend>
-        <! -- text type - FSU REQ -->
-        <ul>
-            <li><label for="itemName">Item Name:</label><input type="text" id="itemName" /></li>
-        </ul>
-        <ul>
-            <li>Media Type
-                <! -- text checkbox - FSU REQ -->
-                <li><input type="checkbox" value="Book" id="book" /><label for="book">Book</label></li>
-                <li><input type="checkbox" value="eBook" id="ebook" /><label for="ebook">eBook</label></li>
-                <li><input type="checkbox" value="Audible" id="audible" /><label for="audible">Audible</label></li>
-                <li><input type="checkbox" value="Music" id="music" /><label for="music">Music</label></li>
-                <li><input type="checkbox" value="Movie" id="movie" /><label for="movie">Movie</label></li>             
-                <li><input type="checkbox" value="Software" id="software" /><label for="software">Software</label></li>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <! -- Priority Range - FSU REQ --> 
-                <label for="priority">How much do you desire this item:</label>
-                <input type="range" min="1" max="10" name="rating" type="range">
-            </li>
-        </ul>
-        <ul>
-            <li>Select Preferred Vendor
-                <label for="Preferred Vendor"</label>
-                <select id="preferredVendor">
-                    <optgroup label="Vendor"
-                              <option value="Amazon">amazon</option>
-                              <option value="iTunes">iTunes</option>
-                              <option value="Audible.com">audible</option>
-                              <option value="Barnes & Noble">barnes</option>
-                              <option value="Netflix">netflix</option>
-                </select>
-        </ul>
-        <! -- Desired Date -- FSU REQ -->
-        <ul>
-            <li>
-                <label for="desireDate">Purchase by date:</label><input type="desireDate">
-            </li>
-        </ul>
-        <ul>
 
-        </ul>
-            <! -- textarea - FSU REQ --> 
-        <ul>
-            <li><label for="description">Notes:</label><textarea rows"3" cols="30">Add necessary notes and instructions here.</textarea>
-        </ul>
-        <! Save Date - hidden field - FSU REQ --> 
-        <input type="hidden" name="saveDate" value=$date>
-        </ul>
-        <ul>
-            <! -- Submit Button - FSU REQ -->
-            <li>Ready to Save
-            <input type="submit" value="Submit">
+    <header>
+        <h1>Input <em>toBuy</em> Item</h1>
+    </header>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Information</legend>
+            <! -- text type - FSU REQ -->
+            <ul>
+                <li><label for="itemName">Item Name:</label><input type="text" id="itemName" style="background-color: F2E9D8" size=50 /></li>
+            </ul>
+<! -- Media Type -->
+            <ul>
+                <li>Select Media Type:
+                    <label for="Select Media Type:"</label>
+                    <select id="mediaType"  style="background-color: F2E9D8">
+                        <option value="book">Book</option>
+                        <option value="eBook">eBook</option>
+                        <option value="audible">Audible</option>
+                        <option value="music">Music</option>
+                        <option value="movie">Movie</option>
+                        <option value="software">Software</option>
+                    </select>
+            </ul>
+<! -- Desired Vendors -->
+            <ul>
+                <li>Check Desired Vendors
+                    <style>.item {white-space: nowrap;display:inline}</style>
+                    <li></li>
+                    <input type="checkbox"  style="color: F2E9D8" value="Amazon" id="amazon" /><label for="amazon">Amazon</label>
+                    <input type="checkbox" value="iTunes" id="iTunes" /><label for="iTunes">iTunes</label>
+                    <input type="checkbox" value="Audible" id="audible" /><label for="audible">Audible</label>
+                    <input type="checkbox" value="Barnes & Noble" id="bn" /><label for="bn">Barnes & Noble</label>
+                    <input type="checkbox" value="Netflix" id="netflix" /><label for="netflix">Netflix</label>             
+                    </style>
             </li>
         </ul>
+<! -- Priority Range -->
+        <ul>
+            <li>
+                <label for="priority">How much do you desire this item:</label>
+                <input type="range" min="1" max="10" name="rating" type="range"  style="background-color: F2E9D8">
+            </li>
+        </ul>
+<! -- Purcahse by Date -->
+        <ul>
+            <li>
+                <label for="desireDate">Purchase by date:</label> <input type="desireDate"  style="background-color: F2E9D8">
+            </li>
+        </ul>
+<! -- Description -->
+        <div id="mainContent">
+        <ul>
+            <li><label for="description">Notes:</label> <textarea  style="background-color: F2E9D8" rows"3" cols="30">Add necessary notes and instructions here.</textarea> 
+        </ul>
+<! -- Save Date - hidden field --> 
+        <input type="hidden" name="saveDateTime" value=$dateTime>
+        </ul>
+<! -- Submit Button - FSU REQ -->
+        <ul>
+            <li>Ready to Save
+            <input type="submit" value="Submit"  style="background-color: F2E9D8">
+            </li>
+        </ul>
+        </div>
 </form>
 
-<!script type="text/javascript" src="toBuy.js">
+<script type="text/javascript" src="toBuy.js"></script>
 
 </body>
 </html>
