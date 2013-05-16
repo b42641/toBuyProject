@@ -23,6 +23,15 @@ h1 {
     padding: 0.75em;
     margin: -0.75em -0.75em 0.75em -0.75em;
 }
+#itemName {background-color: /*ibc*/ #F2E9D8;}
+
+#mediaType {background-color: /*ibc*/ #F2E9D8;}
+#priority {background-color: /*ibc*/ #F2E9D8;}
+#desireDate {background-color: /*ibc*/ #F2E9D8;}
+#description {background-color: /*ibc*/ #F2E9D8;}
+#submitButton {background-color: /*ibc*/ #F2E9D8;}
+
+.bckColor {background-color: #FFF000;}
 .hasFocus{border: 2px solid #ff0000}
 .even{background: #ffffff}
 
@@ -36,7 +45,7 @@ h1 {
 // header color /*hc*/ #D9D1BA
 // body background /*bbg*/ #D9D1BA
 // body color /*bc*/ #1C2F40
-// Input background color /*ibc*/ #FFE098
+// Input background color /*ibc*/ #F2E9D8
 
 
 

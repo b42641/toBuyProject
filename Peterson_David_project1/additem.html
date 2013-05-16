@@ -26,22 +26,21 @@
     
 </head>
 <body>
-
     <header>
         <h1>Input <em>toBuy</em> Item</h1>
     </header>
-    <form action="" method="post">
+    <form action="" method="post" id="inputForm">
         <fieldset>
             <legend>Information</legend>
             <! -- text type - FSU REQ -->
             <ul>
-                <li><label for="itemName">Item Name:</label><input type="text" id="itemName" style="background-color: F2E9D8" size=50 /></li>
+                <li><label for="itemName">Item Name:</label><input type="text" id="itemName" size=50 /></li>
             </ul>
 <! -- Media Type -->
             <ul>
                 <li>Select Media Type:
                     <label for="Select Media Type:"</label>
-                    <select id="mediaType"  style="background-color: F2E9D8">
+                    <select id="mediaType">
                         <option value="book">Book</option>
                         <option value="eBook">eBook</option>
                         <option value="audible">Audible</option>
@@ -55,11 +54,11 @@
                 <li>Check Desired Vendors
                     <style>.item {white-space: nowrap;display:inline}</style>
                     <li></li>
-                    <input type="checkbox"  style="color: F2E9D8" value="Amazon" id="amazon" /><label for="amazon">Amazon</label>
-                    <input type="checkbox" value="iTunes" id="iTunes" /><label for="iTunes">iTunes</label>
-                    <input type="checkbox" value="Audible" id="audible" /><label for="audible">Audible</label>
-                    <input type="checkbox" value="Barnes & Noble" id="bn" /><label for="bn">Barnes & Noble</label>
-                    <input type="checkbox" value="Netflix" id="netflix" /><label for="netflix">Netflix</label>             
+                    <input type="checkbox" value="Amazon" id="amazon" name="vendors" /><label for="amazon">Amazon</label>
+                    <input type="checkbox" value="iTunes" id="iTunes" name="vendors" /><label for="iTunes">iTunes</label>
+                    <input type="checkbox" value="Audible" id="audible" name="vendors" /><label for="audible">Audible</label>
+                    <input type="checkbox" value="Barnes & Noble" id="bn" name="vendors" /><label for="bn">Barnes & Noble</label>
+                    <input type="checkbox" value="Netflix" id="netflix" name="vendors" /><label for="netflix">Netflix</label>             
                     </style>
             </li>
         </ul>
@@ -67,27 +66,27 @@
         <ul>
             <li>
                 <label for="priority">How much do you desire this item:</label>
-                <input type="range" min="1" max="10" name="rating" type="range"  style="background-color: F2E9D8">
+                <input type="range" min="1" max="10" name="rating" type="range"  id="priority" >
             </li>
         </ul>
 <! -- Purcahse by Date -->
         <ul>
             <li>
-                <label for="desireDate">Purchase by date:</label> <input type="desireDate"  style="background-color: F2E9D8">
+                <label for="desireDate">Purchase by date:</label> <input type="date" id="desireDate" >
             </li>
         </ul>
 <! -- Description -->
         <div id="mainContent">
         <ul>
-            <li><label for="description">Notes:</label> <textarea  style="background-color: F2E9D8" rows"3" cols="30">Add necessary notes and instructions here.</textarea> 
+            <li><label for="description">Notes:</label> <textarea  id="description" rows"3" cols="30">Add necessary notes and instructions here.</textarea> 
         </ul>
 <! -- Save Date - hidden field --> 
-        <input type="hidden" name="saveDateTime" value=$dateTime>
+        <input type="hidden" name="saveDateTime" id="saveDateTime" value=$dateTime>
         </ul>
 <! -- Submit Button - FSU REQ -->
         <ul>
             <li>Ready to Save
-            <input type="submit" value="Submit"  style="background-color: F2E9D8">
+            <input type="button" value="Submit" id="submitButton" >
             </li>
         </ul>
         </div>
