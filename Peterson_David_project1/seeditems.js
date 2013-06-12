@@ -1,4 +1,5 @@
-//  toBuy Project.js
+// seeditems.js
+// toBuy Project
 // David Peterson 2013/5/8
 // VFW 1305 assignment 3
 // toBuy gives the user a central location to create a "wishlist"
@@ -7,85 +8,39 @@
 //
 
 
-var checkBoxes = document.getElementById("inputForm").vendors;
-// -- Border Active 
-// -- Item Border
-var focusBorder = function(){
-    itemName.setAttribute("class", "hasFocus");
-}
-var blurBorder = function(){
-    itemName.removeAttribute("class", "hasFocus");
-}
 
 // -- Get Input Information
 // -- Get the value of the itemName
-var getInformation = function(){
-    console.log(itemName.value);
-    localStorage.setItem("ItemName", itemName.value);
-    console.log(desireDate.value);
-    localStorage.setItem("DesiredDate", desireDate.value);
-    console.log(mediaType.value);
-    localStorage.setItem("mediaType", mediaType.value);
-    console.log(priority.value);
-    localStorage.setItem("Priority", priority.value);
-    console.log(Date());
-//var getChkItems = function(){
-    for(i=0, j=checkBoxes.length; i<j; i++){
-        if(checkBoxes[i].checked){
-            console.log(checkBoxes[i].value);
-        };
-    };
+var seedInformation = function(){
+// First Record
+    localStorage.setItem("itemName", "Star Trek Soundtrack");
+    localStorage.setItem("mediaType", "Music");
+    localStorage.setItem("checkBoxes", [Amazon, iTunes]);
+    localStorage.setItem("priority", 6);
+    localStorage.setItem("desiredDate", "2013/12/25");
+    localStorage.setItem("description", "This is the Original Series Music");
+    localStorage.setItem("saveDate", "2012/11/12 01:15");
+    
+    
+// Second Record
+    localStorage.setItem("itemName", "John Mayer Born & Raised");
+    localStorage.setItem("mediaType", "Music");
+    localStorage.setItem("checkBoxes", [Amazon, iTunes]);
+    localStorage.setItem("priority", 9);
+    localStorage.setItem("desiredDate", "2013/10/21");
+    localStorage.setItem("description", "Latest Album");
+    localStorage.setItem("saveDate", "2013/01/12 04:22");
+    
+// Third Record
+    localStorage.setItem("itemName", "Game of Thrones");
+    localStorage.setItem("mediaType", "Book");
+    localStorage.setItem("checkBoxes", [Amazon, iTunes]);
+    localStorage.setItem("priority", 3);
+    localStorage.setItem("desiredDate", "2013/12/25");
+    localStorage.setItem("description", "I think this is the name of the first book");
+    localStorage.setItem("saveDate", "2012/03/13 03:33");
+    
+};      
+    
 
-
-
-/*var checkBox = document.getElementById("priority"); CheckBox
-var priority = document.getElementById("priority");
-var preferredVendor = document.getElementById("preferredVendor");
-var description = document.getElementById("description");
-*/
-/*
-    localStorage.setItem("ItemName", itemName.value);
-    localStorage.setItem("DesiredDate", desireDate.value);
-    localStorage.setItem("mediaType", mediaType.value);
-    localStorage.setItem("Priority", priority.value);*/
-//    localStorage.setItem("Preferred Vendor", preferredVendor.value);
-//    localStorage.setItem("Description", description.value);
-    localStorage.setItem("SaveDate", Date());
-};
-
-
-
-
-
-
-// -- Get all the information
-//var getEverything = function(){
-//    console.log("Here");
-//};
-
-
-
-
-//itemName.addEventListener("blur", getItemName);
-//desireDate.addEventListener("blur", getDesireDate);
-//submitButton.addEventListener("click", getItemName);
-
-
-//var itemName = document.getElementById("itemName");
-//var myDesireDate = document.getElementById("desireDate");
-//var saveDate = document.getElementById("saveDate");
-
-//var getDesireDate = function(){
-//    console.log(desireDate.value);
-//
-//itemName.addEventListener("blur", getItemName);
-//desireDate.addEventListener
-
-
-
-//EventListener
-
-
-itemName.addEventListener("focus", focusBorder);
-itemName.addEventListener("blur", blurBorder);
-submitButton.addEventListener("click", getInformation);
+submitButton.addEventListener("click", seedInformation);

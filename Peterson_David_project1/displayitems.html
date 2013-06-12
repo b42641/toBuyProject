@@ -1,4 +1,5 @@
-<! toBuy Project.js
+<! displayitems.html
+<! toBuy Project
 <! David Peterson 2013/5/8
 <! VFW 1305 assignment 3
 <! toBuy gives the user a central location to create a "wishlist"
@@ -6,7 +7,6 @@
 <! ultimately the category can be linked to preferred online store
 
 <! index.html = Main Startup Screen for toBuy Application
-
 
 <!DOCTYPE html>
 <html>
@@ -27,72 +27,17 @@
 </head>
 <body>
     <header>
-        <h1>Input <em>toBuy</em> Item</h1>
+        <h1>Display <em>toBuy</em> Items</h1>
     </header>
-    <form action="" method="post" id="inputForm">
+    <form 
         <fieldset>
-            <legend>Information</legend>
-            <! -- text type - FSU REQ -->
-            <ul>
-                <li><label for="itemName">Item Name:</label><input type="text" id="itemName" size=50 /></li>
-            </ul>
-<! -- Media Type -->
-            <ul>
-                <li>Select Media Type:
-                    <label for="Select Media Type:"</label>
-                    <select id="mediaType">
-                        <option value="book">Book</option>
-                        <option value="eBook">eBook</option>
-                        <option value="audible">Audible</option>
-                        <option value="music">Music</option>
-                        <option value="movie">Movie</option>
-                        <option value="software">Software</option>
-                    </select>
-            </ul>
-<! -- Desired Vendors -->
-            <ul>
-                <li>Check Desired Vendors
-                    <style>.item {white-space: nowrap;display:inline}</style>
-                    <li></li>
-                    <input type="checkbox" value="Amazon" id="amazon" name="vendors" /><label for="amazon">Amazon</label>
-                    <input type="checkbox" value="iTunes" id="iTunes" name="vendors" /><label for="iTunes">iTunes</label>
-                    <input type="checkbox" value="Audible" id="audible" name="vendors" /><label for="audible">Audible</label>
-                    <input type="checkbox" value="Barnes & Noble" id="bn" name="vendors" /><label for="bn">Barnes & Noble</label>
-                    <input type="checkbox" value="Netflix" id="netflix" name="vendors" /><label for="netflix">Netflix</label>             
-                    </style>
-            </li>
-        </ul>
-<! -- Priority Range -->
-        <ul>
-            <li>
-                <label for="priority">How much do you desire this item:</label>
-                <input type="range" min="1" max="10" name="rating" type="range"  id="priority" >
-            </li>
-        </ul>
-<! -- Purcahse by Date -->
-        <ul>
-            <li>
-                <label for="desireDate">Purchase by date:</label> <input type="date" id="desireDate" >
-            </li>
-        </ul>
-<! -- Description -->
-        <div id="mainContent">
-        <ul>
-            <li><label for="description">Notes:</label> <textarea  id="description" rows"3" cols="30">Add necessary notes and instructions here.</textarea> 
-        </ul>
-<! -- Save Date - hidden field --> 
-        <input type="hidden" name="saveDateTime" id="saveDateTime" value=$dateTime>
-        </ul>
-<! -- Submit Button - FSU REQ -->
-        <ul>
-            <li>Ready to Save
-            <input type="button" value="Submit" id="submitButton" >
-            </li>
-        </ul>
+            <legend>Display Records</legend>
+
+
         </div>
 </form>
-
-<script type="text/javascript" src="toBuy.js"></script>
+<a href="index.html">Return to Home</a>
+<script type="text/javascript" src="seeditems.js"></script>
 
 </body>
 </html>
