@@ -50,3 +50,4 @@ var captureData = function(){
 itemName.addEventListener("focus", focusBorder);
 itemName.addEventListener("blur", blurBorder);
 submitButton.addEventListener("click", addItem);
+
