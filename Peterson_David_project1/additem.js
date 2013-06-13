@@ -20,7 +20,7 @@ var blurBorder = function(){
 
 // -- Get Input Information
 // -- Get the value of the itemName
-var getInformation = function(){
+var addItem = function(){
     var itemName = document.getElementById("itemName");
     var mediaType = document.getElementById("mediaType");
     var checkBoxes = document.getElementById("checkBoxes");
@@ -49,4 +49,4 @@ var captureData = function(){
 //EventListener
 itemName.addEventListener("focus", focusBorder);
 itemName.addEventListener("blur", blurBorder);
-submitButton.addEventListener("click", getInformation);
+submitButton.addEventListener("click", addItem);

@@ -8,8 +8,6 @@
 //
 
 // -- Get Input Information
-// -- Get the value of the itemName
-
 
 var displayInformation = function(){
     for(i=0, j=localStorage.length; i<j; i++){
@@ -20,8 +18,7 @@ var displayInformation = function(){
     var priority = localStorage.getItem("priority");
     var desireddate = localStorage.getItem("desiredDate");
     var description = localStorage.getItem("description");
-    var saveDate = localStorage.getItem("saveDate");
-    
+    var saveDate = localStorage.getItem("saveDate");    
     
 var captureData = function(){
     localStorage.setItem("ItemName", itemName.value);
@@ -29,7 +26,7 @@ var captureData = function(){
     localStorage.setItem("Priority", priority.value);
     localStorage.setItem("DesiredDate", desireDate.value);
     localStorage.setItem("description", description.value);
-    localStorage.setItem("saveDate", Date())
+    localStorage.setItem("saveDate", Date());
 
 //var getChkItems = function(){
     for(i=0, j=checkBoxes.length; i<j; i++){

@@ -7,6 +7,9 @@
 // ultimately the category can be linked to preferred online store
 //
 
+var clearItems = function(){
+localStorage.clear
+};
 
 
-submitButton.addEventListener("click", getInformation);
+submitButton.addEventListener("click", clearItems);
