@@ -99,6 +99,7 @@ var getChkItems = function(){
         $('items').style.display = "block";
         for(var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
+            var linksli = document.createElement('li');
             makeList.appendChild(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
@@ -111,10 +112,39 @@ var getChkItems = function(){
                 makeSubList.appendChild(makeSubli);
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubli.innerHTML = optSubText;
+                makeSubli.appendChild(linksli);
             }
+            makeItemLinks(localStorage.key[i], linksli); //Create our edit and delete buttons for each
         }
     }
 
+    // Make Item Links
+    //Creat the edit and delete links for each item
+    function makeItemLinks(key, linksli){
+        //add edit single item link
+        var editLink = document.createElement("a");
+        editLink.href = "#";
+        editLink.key = key;
+        var editText = "edit Contact";
+        //editLink.addEventListener("click", editItem);
+        editLink.innerHTML = editText;
+        linksli.appendChild(editLink);
+        
+        //
+        var breakTag = document.createElement('br');
+        linksli.appendChild(breakTag);
+        
+        //delete single item link
+        var deleteLink = document.createElement("a");
+        deleteLink.href = "#";
+        deleteLink.key = key;
+        var deleteText = "Delete Contact";
+        //deleteLink.addEventListener("click", deleteItem);
+        deleteLink.innerHTML = deleteText;
+        linksli.appendChild(deleteLink)
+    }
+    
+    
     function clearLocal(){
         if(localStorage.length === 0){
             alert("There is no data to clear.")
