@@ -7,47 +7,49 @@
 // ultimately the category can be linked to preferred online store
 //
 
-
-var checkBoxes = document.getElementById("inputForm").vendors;
-// -- Border Active 
-// -- Item Border
-var focusBorder = function(){
-    itemName.setAttribute("class", "hasFocus");
-}
-var blurBorder = function(){
-    itemName.removeAttribute("class", "hasFocus");
-}
-
-// -- Get Input Information
-// -- Get the value of the itemName
-var addItem = function(){
-    var itemName = document.getElementById("itemName");
-    var mediaType = document.getElementById("mediaType");
-    var checkBoxes = document.getElementById("checkBoxes");
-    var priority = document.getElementById("priority");
-    var desireddate = document.getElementById("desiredDate");
-    var description = document.getElementById("description");
+//Wait until the DOM is ready.
+window.addEventListener("DOMContentLoaded", function(){
     
-var captureData = function(){
-    localStorage.setItem("ItemName", itemName.value);
-    localStorage.setItem("mediaType", mediaType.value);
-    localStorage.setItem("Priority", priority.value);
-    localStorage.setItem("DesiredDate", desireDate.value);
-    localStorage.setItem("description", description.value);
-    localStorage.setItem("saveDate", Date())
-
-//var getChkItems = function(){
-    for(i=0, j=checkBoxes.length; i<j; i++){
-        if(checkBoxes[i].checked){
-            console.log(checkBoxes[i].value);
-        };
+    //getElementById
+    function $(x){
+        var theElement = document.getElementById(x);
+        return theElement;
+    }
+    
+    //Create Select Field Element and populate with option
+    function makeMedia(){
+        var formTag = document.getElementsByTagName("form"),  //formTag is an array of all the formTags
+            selectLi = $('select'),
+            makeSelect = document.createElement('select');
+            makeSelect.setAttribute("id", "groups");
+        for (var i=0, j=mediaTypes.length; i<j; i++){
+            var makeOption = document.createElement('option');
+            var optText = mediaTypes[i];
+            makeOption.setAttribute("value", optText);
+            makeOption.innerHTML = optText;
+            makeSelect.appendChild(makeOption);
+        }
+        selectLi.appendChild(makeSelect);
+    }
+    
+    function storeData(){
+        localStorage.setItem("test", "hello");
     };
-};
+    
 
-
-
-//EventListener
-itemName.addEventListener("focus", focusBorder);
-itemName.addEventListener("blur", blurBorder);
-submitButton.addEventListener("click", addItem);
-
+    //Variable defautls
+    var mediaTypes = ["-- Media Type --", "book", "ebook", "audible", "music", "movie", "software"];
+    makeMedia();
+    
+    //Set Link and Submit Click Events
+//    var displayLink = $('displayLink');
+//    displayLink.addEventListener("click", getData);
+    
+//    var clearLink = $('clearLink');
+//    clearLink.addEventListener("click", clearLocal);
+    
+//   var save = $('submit');
+//   save.addEventListener("click", storeData);
+   
+});    
+    

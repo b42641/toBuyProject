@@ -1,0 +1,51 @@
+html {
+    background-color: /*bc*/ #000000;
+}
+body {
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    margin: .5em auto;
+    padding: 1.5em;
+    background-color: /*bbg*/ #D9D1BA;
+    color: /*bc*/ #1C2F40;
+    border: 0.75em solid /*brc*/ #F2E9D8;
+}
+p {
+    margin: 1.5em 0;
+}
+ul
+{
+    list-style-type: none;
+}
+h1 {
+    background-color: /*hbg*/ #1C2F40;
+    color: /*hc*/ #D9D1BA;
+    font-size: 200%;
+    padding: 0.75em;
+    margin: -0.75em -0.75em 0.75em -0.75em;
+}
+#itemName {background-color: /*ibc*/ #F2E9D8;}
+
+#mediaType {background-color: /*ibc*/ #F2E9D8;}
+#priority {background-color: /*ibc*/ #F2E9D8;}
+#desireDate {background-color: /*ibc*/ #F2E9D8;}
+#description {background-color: /*ibc*/ #F2E9D8;}
+#submitButton {background-color: /*ibc*/ #F2E9D8;}
+
+.bckColor {background-color: #FFF000;}
+.hasFocus{border: 2px solid #ff0000}
+.even{background: #ffffff}
+
+// COLORS
+// Kuler - Etro
+// colors dark #1C2F40 middle #4C6173 base #8094A6 darktan #D9D1BA tan #F2E9D8
+// main background black
+// border background /*brc*/ #F2E9D8
+// background color /*bc*/ #000000 (black)
+// header background /*hbg*/ #1C2F40
+// header color /*hc*/ #D9D1BA
+// body background /*bbg*/ #D9D1BA
+// body color /*bc*/ #1C2F40
+// Input background color /*ibc*/ #F2E9D8
+
+
+

@@ -29,7 +29,8 @@
         <h1>Add <em>toBuy</em> Item</h1>
         <nav>
             <a href="#" id="displayLink">Display all Items</a>
-            <a href="#" id="clearLink">Clear all Items</a>        
+            <a href="#" id="clearLink">Clear all Items</a>
+            <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
         </nav>
     </header>
     <form action="#" method="post" id="inputForm" />
@@ -42,15 +43,14 @@
                 <! -- Media Type -->
                 <li id="select"><label for="group">Select Media Type:</label><br /></li> 
 <! -- Desired Vendors -->
-                <li>Check Desired Vendors
+                <li>Desired Vendor:
+                <ul class="checkbox">
                     <style>.item {white-space: nowrap;display:inline}</style>
-                    <li></li>
                     <input type="checkbox" value="Amazon" id="amazon" name="vendors" /><label for="amazon">Amazon</label>
                     <input type="checkbox" value="iTunes" id="iTunes" name="vendors" /><label for="iTunes">iTunes</label>
-                    <input type="checkbox" value="Audible" id="audible" name="vendors" /><label for="audible">Audible</label>
-                    <input type="checkbox" value="Barnes & Noble" id="bn" name="vendors" /><label for="bn">Barnes & Noble</label>
-                    <input type="checkbox" value="Netflix" id="netflix" name="vendors" /><label for="netflix">Netflix</label>             
+                    <input type="checkbox" value="Audible" id="audible" name="vendors" /><label for="audible">Audible</label>         
                     </style>
+                </ul>
             </li>
 <! -- Priority Range -->
             <li>
@@ -64,11 +64,11 @@
 <! -- Description -->
             <li><label for="description">Notes:</label> <textarea  id="description" rows"3" cols="30">Add necessary notes and instructions here.</textarea> 
 <! -- Save Date - hidden field --> 
-        <input type="hidden" name="saveDateTime" id="saveDateTime" value=$dateTime>
+        <input type="hidden" name="saveDateTime" id="saveDate" value=$date>
         </ul>
 <! -- Submit Button - FSU REQ -->
             <input type="button" value="Submit" id="submitButton" >
-    </form>
+
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
