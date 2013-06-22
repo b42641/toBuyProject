@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function(){
             makeOption.innerHTML = optText;
             makeSelect.appendChild(makeOption);
         }
-        selectLi.appendChild(makeSelect);
+        if(selectLi){selectLi.appendChild(makeSelect)};
     }
     
 //Find value of selected checkbox
@@ -251,6 +251,16 @@ window.addEventListener("DOMContentLoaded", function(){
 
     }
     
+
+    // -- Border Active 
+    // -- Item Border
+    var focusBorder = function(){
+        itemName.setAttribute("class", "hasFocus");
+    }
+
+    var blurBorder = function(){
+        itemName.removeAttribute("class", "hasFocus");
+    }
     //Variable defautls
     var mediaTypes = ["-- Media Type --", "book", "ebook", "audible", "music", "movie", "software"];
     var desiredVendorValue;
@@ -259,13 +269,14 @@ window.addEventListener("DOMContentLoaded", function(){
     
     //Set Link and Submit Click Events
     var displayLink = $('displayLink');
-    displayLink.addEventListener("click", getData);
+    if(displayLink){displayLink.addEventListener("click", getData)};
     
     var clearLink = $('clearLink');
-    clearLink.addEventListener("click", clearLocal);
+    if(clearLink){clearLink.addEventListener("click", clearLocal)};
     
-   var save = $('submitButton');
-   save.addEventListener("click", validate);
+   //EventListener
+    itemName.addEventListener("focus", focusBorder);
+    itemName.addEventListener("blur", blurBorder);
    
 });    
     
