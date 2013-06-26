@@ -8,7 +8,7 @@ body {
     margin: .5em auto;
     padding: 1.5em;
     background-color: /*bbg*/ #FFFFFF;
-    color: /*bc*/ #2267F2;
+    input {background-color:White;}
     border: 0.75em solid /*brc*/ #F2E9D8;
 }
 
@@ -64,14 +64,16 @@ form{
 #description {background-color: /*ibc*/ #DAFDFF;}
 #submitButton {background-color: /*ibc*/ #DAFDFF;}
 
+
 .bckColor {background-color: #FFF000;}
-.hasFocus{border: 2px solid #ff0000;}
+.hasFocus{border: 2px solid #3FBF03;}
+.hasHover{border: 2px solid #2267F2;}
 .even{background: #ffffff;}
 
-// COLORS
-// Kuler - io7
-// colors drk blue #2267F2 lit blue #1BDDF2 green #3FBF03 orange #F28705 red #F24738
+/* COLORS
+Kuler - io7
+colors drk blue #2267F2 lit blue #1BDDF2 green #3FBF03 orange #F28705 red #F24738
 very light blue DAFDFF
-
+*/
 
 

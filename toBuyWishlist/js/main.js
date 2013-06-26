@@ -250,33 +250,64 @@ window.addEventListener("DOMContentLoaded", function(){
         }
 
     }
-    
-
-    // -- Border Active 
-    // -- Item Border
-    var focusBorder = function(){
-        itemName.setAttribute("class", "hasFocus");
-    }
-
-    var blurBorder = function(){
-        itemName.removeAttribute("class", "hasFocus");
-    }
     //Variable defautls
     var mediaTypes = ["-- Media Type --", "book", "ebook", "audible", "music", "movie", "software"];
     var desiredVendorValue;
     var errMsg = $('errors');
     makeMedia();
     
-    //Set Link and Submit Click Events
+    //Set Link and Submit Click Events    
+    // -- Border Active 
+    // -- focus actions
+    var focusItem = function(){
+        itemName.setAttribute("class", "hasFocus");
+    }
+    var focusDesireDate = function(){
+        desireDate.setAttribute("class", "hasFocus");
+    }    
+    var focusDescription = function(){
+        description.setAttribute("class", "hasFocus");
+    }
+        
+
+    // -- blur actions
+    var blurItem = function(){
+        itemName.removeAttribute("class", "hasFocus");
+    }    
+    var blurDesireDate = function(){
+        desireDate.removeAttribute("class", "hasFocus");
+    } 
+    var blurDescription = function(){
+        description.removeAttribute("class", "hasFocus");
+    }
+    var mouseOverItemName = function(){
+        itemName.setAttribute("class", "hasHover");
+    }
+    var mouseOnItemName = function(){
+        itemName.removeAttribute("class", "hasHover");
+    }
+/*    itemName.onmouseover = function() {
+        description.setAttribute("class", "hovering");
+    }*/
     var displayLink = $('displayLink');
-    if(displayLink){displayLink.addEventListener("click", getData)};
+    displayLink.addEventListener("click", getData);
     
     var clearLink = $('clearLink');
-    if(clearLink){clearLink.addEventListener("click", clearLocal)};
+    clearLink.addEventListener("click", clearLocal);
+    
+    var save = $('submitButton');
+    save.addEventListener("click", validate);
     
    //EventListener
-    itemName.addEventListener("focus", focusBorder);
-    itemName.addEventListener("blur", blurBorder);
+    itemName.addEventListener("focus", focusItem);
+    desireDate.addEventListener("focus", focusDesireDate);
+    description.addEventListener("focus", focusDescription);
+    
+    itemName.addEventListener("blur", blurItem);
+    desireDate.addEventListener("blur", blurDesireDate);
+    description.addEventListener("blur", blurDescription);
    
+    itemName.onmouseover = mouseOverItemName;
+    itemName.onmouseout = mouseOnItemName;
 });    
     
