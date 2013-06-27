@@ -6,25 +6,27 @@ body {
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-weight:200;
     margin: .5em auto;
-    padding: 1.5em;
+    padding: .5em;
     background-color: /*bbg*/ #FFFFFF;
     input {background-color:White;}
-    border: 0.75em solid /*brc*/ #F2E9D8;
+    border: 0.5em solid /*brc*/ #F2E9D8;
 }
 
 p {
-    margin: 1.5em 0;
+    margin: .1em 0;
 }
 ul
 {
-    list-style-type: none;
+    list-style-type: none;    
+    margin: 0;
+    padding: 0;
 }
 h1 {
     background-color: /*hbg*/ #F28705;
     color: /*hc*/ #FFFFFF;
     font-size: 150%;
     font-weight:200;
-    padding: 0.1em;
+    padding: 0.5em;
     margin: -0.75em -0.75em 0.75em -0.75em;
 }
 h2 {
@@ -32,14 +34,14 @@ h2 {
     font-size: 100%;
     font-weight:200;
     color: #F28705;
-    line-height: 5pt;
+    line-height: 12pt;
 }
 h4 {
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 100%;
     font-weight:200;
     color: #F28705;
-    line-height: 5pt;
+    line-height: 12pt;
 }
 form{
     color: #2267F2;
